@@ -1,0 +1,94 @@
+Infraestrutura I
+
+Introdução
+
+No exercício a seguir, vamos criar um shell script para verificar se um arquivo existe
+em um diretório
+
+Objetivos
+● Verificar se um determinado arquivo existe ou não.
+
+Exercício
+1. Para iniciar, crie um arquivo de texto chamado meu-primeiro-script.sh.
+touch meu-primeiro-script.sh
+
+
+2. Vamos editar o arquivo, usando o editor de texto de sua preferência.
+nano meu-primeiro-script.sh
+
+
+3. Comece informando que o arquivo se trata de um shell script
+#!/bin/bash
+
+
+4. Vamos criar um comando de instrução que nos informa como o script deve ser
+executado.
+a. Ex: suponha que você nunca tenha executado antes e não tenha acesso ao
+código fonte, como saber quais parâmetros passar?
+b. Aqui verificamos se não há parâmetro informado, ou seja se chamarmos
+nosso script sem passar o arquivo que queremos testar, o programa vai nos
+retornar o comando a instrução correta e encerrar sua execução
+***** sudo chmod +x meu-primeiro-script.sh para alterar a permissão do arquivo.
+
+if [ $# -eq 0 ]
+then
+echo "Sintaxe: \"$0 nome_do_arquivo\" "
+exit 1
+fi
+
+
+5. Vamos testar?
+digitalhouse@linux-infra:~$ ./meu-primeiro-script.sh
+Sintaxe: "./meu-primeiro-script.sh nome_do_arquivo"
+
+
+6. Vamos agora, voltar para edição e adicionar os condicionais para saber se o arquivo
+existe ou não e para isso vamos testar o comando “-f”, que significa “FIND”
+
+if [ -f $1 ]
+then
+echo "$1 existe e é um arquivo"
+else
+echo "$1 não é um arquivo"
+fi
+
+
+7. Vamos testar a execução, procurando por um arquivo chamado “batata.pdf”
+digitalhouse@linux-infra:~$ ./meu-primeiro-script.sh
+batata.pdf
+batata.pdf não é um arquivo
+
+
+8. O arquivo batata.pdf não existe então vamos ter que criar um para teste. Para isso
+vamos criar um arquivo chamado teste.txt no mesmo diretório que o nosso script se
+encontra
+touch teste.txt
+
+
+9. Agora vamos testar novamente, procurando pelo nosso “teste.txt”
+digitalhouse@linux-infra:~$ ./meu-primeiro-script.sh teste.txt
+teste.txt existe e é um arquivo
+
+
+10. Nosso script completo
+
+#!/bin/bash
+if [ $# -eq 0 ]
+then
+echo "Sintaxe: \"$0 nome_do_arquivo\" "
+exit 1
+fi
+if [ -f $1 ]
+then
+echo "$1 existe e é um arquivo"
+else
+echo "$1 não é um arquivo"
+fi
+
+
+Conclusão
+Este exercício, demonstra a utilização de um shell script para treinar os
+conhecimentos dos alunos e que pode ajudar o usuário/computador/sub-rotina/…
+a verificar se um arquivo existe ou não
+
+

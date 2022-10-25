@@ -1,0 +1,16 @@
+zabbix    ->  serviço para monitoramento de rede (verifica se sites estão online)
+
+isup.me   -> 
+
+https://codeshare.io/Od4vrA
+
+20221025_infra01
+
+sala 4
+
+Igor Matos
+Lucas Santos
+Renato Fernandes
+Tiago Silva
+Pedro Simões
+
