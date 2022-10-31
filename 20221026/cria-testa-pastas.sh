@@ -4,7 +4,7 @@
 
 
 
-# shell script para criar pastas e verificar se pasta existe
+# shell script para criar pastas e verificar se pastas existem
 
 # se não existir, informar que não existe e criar a pasta
 # se existir, informar pasta já existe
@@ -30,7 +30,7 @@ done
 
 # length array_pasta
 length=${#array_pasta[@]}
-qtd_mais_length=$((qtd+length))
+qtd_mais_length=$((qtd+length-1))
 
 # verifica se qtd é maior de length
 if [ $qtd -gt $length ]; then
