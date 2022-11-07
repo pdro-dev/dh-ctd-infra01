@@ -1,3 +1,5 @@
 https://www.infowester.com/linuxpermissoes.php#:~:text=As%20permiss%C3%B5es%20s%C3%A3o%20um%20dos,mas%20complexa%20ao%20mesmo%20tempo
 
 
+shellscript
+
