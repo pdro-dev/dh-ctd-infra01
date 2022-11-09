@@ -1,0 +1,30 @@
+Aula 10 
+
+Vamos fazer um Dockerfile para criar uma imagem personalizada para depois executarmos
+um container baseado nesta imagem.
+
+//////////
+
+root@pedro-virtual-machine:/home/pedro/Documentos/dh-ctd-infra01/20221108# docker images -a
+REPOSITORY      TAG       IMAGE ID       CREATED          SIZE
+jokenpopython   latest    5454f7abde98   13 minutes ago   51.1MB
+<none>          <none>    02c4e6a2b12c   13 minutes ago   51.1MB
+<none>          <none>    23a6ab5dcea4   13 minutes ago   51.1MB
+mysql           5.7       eef0fab001e8   4 days ago       495MB
+wordpress       latest    3459394ed749   6 days ago       613MB
+python          alpine    5f9e8f452a5c   2 weeks ago      51.1MB
+hello-world     latest    feb5d9fea6a5   13 months ago    13.3kB
+root@pedro-virtual-machine:/home/pedro/Documentos/dh-ctd-infra01/20221108# docker start -i jokenpopython
+1)Pedra
+2)Papel
+3)Tesoura
+4)Sair do Programa
+O que você escolhe: 3
+Tua escolha:  tesoura
+PC escolheu:  tesoura
+...
+Empate
+Jogar novamente? s/n: n
+Nos vemos!
+root@pedro-virtual-machine:/home/pedro/Documentos/dh-ctd-infra01/20221108# ^C
+root@pedro-virtual-machine:/home/pedro/Documentos/dh-ctd-infra01/20221108# 
